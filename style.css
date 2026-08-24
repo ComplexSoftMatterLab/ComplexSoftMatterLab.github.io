@@ -433,3 +433,30 @@ footer {
 .publication-links a:hover {
   background: #f3f3f3;
 }
+
+/* Student cards */
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.student-card {
+  padding: 25px 0;
+  border-top: 1px solid #ddd;
+}
+
+.student-card .person-info h3 {
+  font-size: 1.4rem;
+  margin: 3px 0 0;
+}
+
+
+/* Smartphone */
+
+@media (max-width: 700px) {
+  .student-grid {
+    grid-template-columns: 1fr;
+  }
+}
