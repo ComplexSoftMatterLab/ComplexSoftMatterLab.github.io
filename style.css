@@ -455,8 +455,19 @@ footer {
 
 /* Smartphone */
 
-@media (max-width: 700px) {
-  .student-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 550px) {
+
+  .person-card {
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
   }
+
+  .person-photo {
+    width: 120px;
+  }
+
+  .page-header h1 {
+    font-size: 2.3rem;
+  }
+
 }
