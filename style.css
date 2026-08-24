@@ -283,8 +283,8 @@ footer {
 
 .person-card {
   display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 25px;
+  grid-template-columns: 200px 1fr;
+  gap: 30px;
   align-items: start;
 }
 
@@ -326,7 +326,6 @@ footer {
   color: #888;
 }
 
-
 /* Responsive */
 
 @media (max-width: 900px) {
@@ -340,11 +339,12 @@ footer {
 @media (max-width: 550px) {
 
   .person-card {
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
   }
 
   .person-photo {
-    width: 100px;
+    width: 120px;
   }
 
   .page-header h1 {
