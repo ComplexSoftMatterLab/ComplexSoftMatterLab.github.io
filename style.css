@@ -249,3 +249,111 @@ footer {
   }
 
 }
+
+/* ========================================
+   People Page
+   ======================================== */
+
+.page-header {
+  max-width: 900px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  margin-top: 5px;
+}
+
+
+/* People sections */
+
+.people-section {
+  margin-bottom: 80px;
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+
+/* Person card */
+
+.person-card {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+.person-photo {
+  width: 160px;
+  aspect-ratio: 1 / 1;
+  background: #f0f0f0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #999;
+  font-size: 0.85rem;
+}
+
+.person-info h3 {
+  font-size: 1.4rem;
+  margin: 3px 0 0;
+}
+
+.person-position {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #777;
+  margin: 0;
+}
+
+.person-name-en {
+  color: #666;
+  margin-top: 2px;
+}
+
+.person-field {
+  margin-top: 18px;
+  font-size: 0.95rem;
+}
+
+.person-info a {
+  color: #333;
+}
+
+.empty-message {
+  color: #888;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .person-card {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .person-photo {
+    width: 100px;
+  }
+
+  .page-header h1 {
+    font-size: 2.3rem;
+  }
+
+}
