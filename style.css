@@ -357,3 +357,13 @@ footer {
   }
 
 }
+
+.vision-statement {
+  margin-top: 35px;
+  padding-left: 22px;
+  border-left: 3px solid #333;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.9;
+}
