@@ -368,3 +368,9 @@ footer {
   font-weight: 500;
   line-height: 1.9;
 }
+
+.email-note {
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: #666;
+}
