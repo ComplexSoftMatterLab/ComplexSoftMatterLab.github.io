@@ -602,3 +602,170 @@ footer {
 .news-link a {
   color: #333;
 }
+
+/* ========================================
+   Home Page
+   ======================================== */
+
+/* Hero */
+
+.hero {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 0 100px;
+}
+
+.hero-lab {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #777;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.hero-tagline {
+  margin: 15px 0 0;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: 300;
+}
+
+.hero-affiliation {
+  margin-top: 50px;
+  color: #666;
+  line-height: 1.8;
+}
+
+
+/* Introduction */
+
+.home-intro {
+  max-width: 850px;
+  margin-bottom: 120px;
+}
+
+.home-intro h2 {
+  margin-bottom: 30px;
+}
+
+.home-intro p {
+  line-height: 2;
+}
+
+
+/* Sections */
+
+.home-section {
+  margin-bottom: 120px;
+}
+
+.home-section > h2 {
+  margin-bottom: 35px;
+}
+
+
+/* Research */
+
+.home-research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.home-research-card {
+  padding: 30px 25px;
+  border-top: 2px solid #333;
+  background: #fafafa;
+}
+
+.home-research-card h3 {
+  margin: 8px 0 12px;
+  font-size: 1.2rem;
+}
+
+.pillar-number {
+  margin: 0;
+  color: #777;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+
+/* News */
+
+.home-news {
+  max-width: 900px;
+}
+
+.home-news-item {
+  padding: 25px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.home-news-item h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+
+/* Links */
+
+.home-link {
+  margin-top: 30px;
+}
+
+.home-link a {
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home-link a:hover {
+  text-decoration: underline;
+}
+
+
+/* Join */
+
+.home-join {
+  margin: 120px 0 80px;
+  padding: 50px;
+  background: #f5f5f5;
+}
+
+.home-join h2 {
+  margin: 5px 0 20px;
+}
+
+
+/* Smartphone */
+
+@media (max-width: 700px) {
+
+  .hero {
+    min-height: auto;
+    padding: 80px 0;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .home-research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-join {
+    padding: 30px 25px;
+  }
+
+}
