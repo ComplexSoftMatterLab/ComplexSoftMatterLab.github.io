@@ -313,9 +313,10 @@ footer {
   margin: 0;
 }
 
-.person-name-en {
-  color: #666;
+.person-name-kana {
   margin-top: 2px;
+  color: #666;
+  font-size: 0.9rem;
 }
 
 .person-field {
