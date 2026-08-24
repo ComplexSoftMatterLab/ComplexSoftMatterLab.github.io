@@ -136,3 +136,116 @@ footer {
     gap: 12px 18px;
   }
 }
+
+/* ========================================
+   Research Page
+   ======================================== */
+
+/* Researchページ冒頭 */
+.research-vision {
+  max-width: 900px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.research-vision h1 {
+  font-size: 3rem;
+  margin: 10px 0 0;
+  line-height: 1.3;
+}
+
+.section-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.lead {
+  font-size: 1.1rem;
+  line-height: 2;
+  max-width: 850px;
+}
+
+
+/* 3つのResearch Pillars */
+.three-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  background: #fff;
+}
+
+.card-number {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #777;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.card-title-en {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.keywords {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+
+/* Research Topics */
+.card ul {
+  padding-left: 1.2rem;
+  margin-top: 20px;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+
+/* Research Approach */
+.method-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.method-list span {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-size: 0.9rem;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+
+  .three-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .research-vision h1 {
+    font-size: 2.3rem;
+  }
+
+}
