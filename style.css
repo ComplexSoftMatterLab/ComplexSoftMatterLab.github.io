@@ -368,3 +368,68 @@ footer {
   font-size: 0.85rem;
   color: #666;
 }
+
+/* ========================================
+   Publications Page
+   ======================================== */
+
+.publication-year {
+  margin-bottom: 80px;
+}
+
+.publication-year > h2 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.publication-category {
+  margin-top: 35px;
+}
+
+.publication-category h3 {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.publication-list {
+  padding-left: 2rem;
+}
+
+.publication-list li {
+  padding-left: 10px;
+  margin-bottom: 35px;
+}
+
+.publication-authors {
+  margin: 0 0 5px;
+}
+
+.publication-title {
+  margin: 0 0 5px;
+  font-weight: 600;
+}
+
+.publication-journal {
+  margin: 0 0 5px;
+  font-style: italic;
+  color: #555;
+}
+
+.publication-links {
+  margin-top: 8px;
+}
+
+.publication-links a {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.publication-links a:hover {
+  background: #f3f3f3;
+}
