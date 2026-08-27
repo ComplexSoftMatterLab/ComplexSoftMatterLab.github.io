@@ -943,6 +943,9 @@ footer p {
     height: 350px;
   }
 
+   .opportunity-grid {
+     grid-template-columns: 1fr;
+   }
 }
 
 
@@ -970,4 +973,13 @@ footer p {
     font-size: 2.2rem;
   }
 
+}
+
+/* Opportunities & Collaboration */
+
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 35px;
 }
