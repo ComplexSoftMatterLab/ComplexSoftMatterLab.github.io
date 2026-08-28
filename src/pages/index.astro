@@ -1,37 +1,15 @@
-<!doctype html>
-<html lang="ja">
+---
+import Layout from "../layouts/Layout.astro";
+import { news } from "../data/news";
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>複雑ソフトマター研究室 | Complex Soft Matter Laboratory</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
-<body>
+const latestNews = news[0];
 
-<nav class="navbar">
-  <div class="nav-inner">
+const formatDate = (date: string) => date.replaceAll("-", ".");
+---
 
-    <a class="nav-logo" href="index.html">
-      Complex Soft Matter Lab
-    </a>
-
-    <div class="nav-links">
-      <a href="index.html">ホーム</a>
-      <a href="research.html">研究</a>
-      <a href="people.html">メンバー</a>
-      <a href="publications.html">研究業績</a>
-      <a href="news.html">ニュース</a>
-      <a href="join.html">研究室に興味のある方へ</a>
-      <a href="contact.html">アクセス</a>
-    </div>
-
-  </div>
-</nav>
-
-
-<main>
+<Layout title="複雑ソフトマター研究室 | Complex Soft Matter Laboratory">
 
   <!-- Hero -->
   <section class="hero">
@@ -49,7 +27,7 @@
     </p>
 
     <p class="hero-affiliation">
-      大阪大学大学院基礎工学研究科<br>
+      大阪大学大学院基礎工学研究科<br />
       Graduate School of Engineering Science, The University of Osaka
     </p>
 
@@ -113,43 +91,54 @@
     </div>
 
     <p class="home-link">
-      <a href="research.html">研究内容を見る →</a>
+      <a href={`${base}/research/`}>研究内容を見る →</a>
     </p>
 
   </section>
 
 
   <!-- News -->
+
   <section class="home-section">
 
     <p class="section-label">News</p>
+
     <h2>ニュース</h2>
 
-    <div class="home-news">
+    {latestNews && (
+      <div class="home-news">
 
-      <article class="home-news-item">
+        <article class="home-news-item">
 
-        <div class="news-meta">
-          <time datetime="2026-10-01">2026.10.01</time>
-          <span class="news-category">Lab</span>
-        </div>
+          <div class="news-meta">
 
-        <h3>
-          複雑ソフトマター研究室が始動します
-        </h3>
+            <time datetime={latestNews.date}>
+              {formatDate(latestNews.date)}
+            </time>
 
-        <p>
-          2026年10月1日より、大阪大学大学院基礎工学研究科で
-          複雑ソフトマター研究室（Complex Soft Matter Laboratory）が
-          始動します。
-        </p>
+            <span class="news-category">
+              {latestNews.category}
+            </span>
 
-      </article>
+          </div>
 
-    </div>
+          <h3>
+            {latestNews.title}
+          </h3>
+
+          {latestNews.body && (
+            <p>
+              {latestNews.body}
+            </p>
+          )}
+
+        </article>
+
+      </div>
+    )}
 
     <p class="home-link">
-      <a href="news.html">ニュース一覧 →</a>
+      <a href={`${base}/news/`}>ニュース一覧 →</a>
     </p>
 
   </section>
@@ -168,24 +157,9 @@
     </p>
 
     <p class="home-link">
-      <a href="join.html">研究室に興味のある方へ →</a>
+      <a href={`${base}/join/`}>研究室に興味のある方へ →</a>
     </p>
 
   </section>
 
-</main>
-
-
-<footer>
-  <p>
-    複雑ソフトマター研究室 / Complex Soft Matter Laboratory
-  </p>
-
-  <p>
-    大阪大学大学院基礎工学研究科 /
-    Graduate School of Engineering Science, The University of Osaka
-  </p>
-</footer>
-
-</body>
-</html>
+</Layout>

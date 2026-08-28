@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { news } from "../data/news";
+
+const formatDate = (date: string) => date.replaceAll("-", ".");
+---
+
+<Layout title="ニュース | 複雑ソフトマター研究室">
+
+  <section class="page-header">
+
+    <p class="section-label">News</p>
+
+    <h1>ニュース</h1>
+
+  </section>
+
+
+  <section class="news-section">
+
+    {news.map((item) => (
+      <article class="news-item">
+
+        <div class="news-meta">
+
+          <time datetime={item.date}>
+            {formatDate(item.date)}
+          </time>
+
+          <span class="news-category">
+            {item.category}
+          </span>
+
+        </div>
+
+        <h2>
+          {item.url ? (
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {item.title}
+            </a>
+          ) : (
+            item.title
+          )}
+        </h2>
+
+        {item.body && (
+          <p>
+            {item.body}
+          </p>
+        )}
+
+      </article>
+    ))}
+
+  </section>
+
+</Layout>

@@ -1,0 +1,245 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { people } from "../data/people";
+
+const faculty = people.filter((member) => member.category === "faculty");
+const doctoral = people.filter((member) => member.category === "doctoral");
+const masters = people.filter((member) => member.category === "masters");
+const undergraduate = people.filter(
+  (member) => member.category === "undergraduate"
+);
+---
+
+<Layout title="メンバー | 複雑ソフトマター研究室">
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <p class="section-label">People</p>
+    <h1>メンバー</h1>
+  </section>
+
+
+  <!-- Faculty -->
+  <section class="people-section">
+
+    <p class="section-label">Faculty</p>
+    <h2>教員</h2>
+
+    <div class="people-grid">
+
+      {faculty.map((member) => (
+        <article class="person-card">
+
+          <div class="person-photo">
+            Photo
+          </div>
+
+          <div class="person-info">
+
+            <p class="person-position">
+              {member.position}
+            </p>
+
+            <h3>{member.name}</h3>
+
+            <p class="person-name-kana">
+              {member.kana}
+            </p>
+
+            {member.email && (
+              <p class="person-email">
+                E-mail: <strong>{member.email}</strong>
+              </p>
+            )}
+
+            {(member.profileUrl || member.scholarUrl) && (
+              <p>
+                {member.profileUrl && (
+                   <a
+                     href={member.profileUrl}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                   >
+                     researchmap
+                   </a>
+                )}
+
+            {member.profileUrl && member.scholarUrl && " / "}
+
+              {member.scholarUrl && (
+                <a
+                  href={member.scholarUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Google Scholar
+                </a>
+              )}
+            </p>
+          )}
+
+          </div>
+
+        </article>
+      ))}
+
+    </div>
+
+  </section>
+
+
+  <!-- Doctoral Students -->
+  <section class="people-section">
+
+    <p class="section-label">Doctoral Students</p>
+    <h2>博士後期課程</h2>
+
+    <div class="student-grid">
+
+      {doctoral.map((member) => (
+        <article class="student-card">
+
+          <div class="person-info">
+
+            <p class="person-position">
+              {member.position}
+            </p>
+
+            <h3>{member.name}</h3>
+
+            <p class="person-name-kana">
+              {member.kana}
+            </p>
+
+            {member.email && (
+              <p class="person-email">
+                E-mail: <strong>{member.email}</strong>
+              </p>
+            )}
+
+            {member.researchTopic && (
+              <p class="person-field">
+                <strong>研究テーマ：</strong>
+                {member.researchTopic}
+              </p>
+            )}
+
+          </div>
+
+        </article>
+      ))}
+
+    </div>
+
+  </section>
+
+
+  <!-- Master's Students -->
+  <section class="people-section">
+
+    <p class="section-label">Master's Students</p>
+    <h2>博士前期課程</h2>
+
+    <div class="student-grid">
+
+      {masters.map((member) => (
+        <article class="student-card">
+
+          <div class="person-info">
+
+            <p class="person-position">
+              {member.position}
+            </p>
+
+            <h3>{member.name}</h3>
+
+            <p class="person-name-kana">
+              {member.kana}
+            </p>
+
+            {member.email && (
+              <p class="person-email">
+                E-mail: <strong>{member.email}</strong>
+              </p>
+            )}
+
+            {member.researchTopic && (
+              <p class="person-field">
+                <strong>研究テーマ：</strong>
+                {member.researchTopic}
+              </p>
+            )}
+
+          </div>
+
+        </article>
+      ))}
+
+    </div>
+
+  </section>
+
+
+  <!-- Undergraduate Students -->
+  <section class="people-section">
+
+    <p class="section-label">Undergraduate Students</p>
+    <h2>学部生</h2>
+
+    {undergraduate.length > 0 ? (
+
+      <div class="student-grid">
+
+        {undergraduate.map((member) => (
+          <article class="student-card">
+
+            <div class="person-info">
+
+              <p class="person-position">
+                {member.position}
+              </p>
+
+              <h3>{member.name}</h3>
+
+              <p class="person-name-kana">
+                {member.kana}
+              </p>
+
+              {member.email && (
+                <p class="person-email">
+                  E-mail: <strong>{member.email}</strong>
+                </p>
+              )}
+
+              {member.researchTopic && (
+                <p class="person-field">
+                  <strong>研究テーマ：</strong>
+                  {member.researchTopic}
+                </p>
+              )}
+
+            </div>
+
+          </article>
+        ))}
+
+      </div>
+
+    ) : (
+
+      <p class="empty-message">
+        Coming soon
+      </p>
+
+    )}
+
+  </section>
+
+
+  <p class="email-note">
+    ※ E-mailアドレスは、各ユーザー名の後に
+    <strong>@cheng.es.osaka-u.ac.jp</strong>
+    を付けてください。
+  </p>
+
+</Layout>
