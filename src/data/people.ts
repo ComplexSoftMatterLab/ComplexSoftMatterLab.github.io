@@ -20,7 +20,7 @@ export interface Member {
 export const people: Member[] = [
   {
     category: "faculty",
-    position: "教授",
+    position: "教授 / Professor",
     name: "金 鋼",
     kana: "きん こう",
     email: "kk",
