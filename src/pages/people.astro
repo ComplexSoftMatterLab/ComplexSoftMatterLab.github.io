@@ -31,7 +31,14 @@ const undergraduate = people.filter(
         <article class="person-card">
 
           <div class="person-photo">
-            Photo
+            {member.photo ? (
+              <img
+               src={member.photo}
+               alt={`${member.name}のプロフィール写真`}
+              />
+            ) : (
+              "Photo"
+            )}
           </div>
 
           <div class="person-info">

@@ -26,6 +26,7 @@ export const people: Member[] = [
     email: "kk",
     profileUrl: "https://researchmap.jp/kangkim",
     scholarUrl: "https://scholar.google.com/citations?user=VByf5OsAAAAJ",
+    photo: "/images/people/kk.png",
   },
 
   {
