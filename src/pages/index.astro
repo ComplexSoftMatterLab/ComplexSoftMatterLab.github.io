@@ -56,45 +56,69 @@ const formatDate = (date: string) => date.replaceAll("-", ".");
   </section>
 
 
-  <!-- Research -->
-  <section class="home-section">
+<!-- Research -->
+<section class="home-section">
 
-    <p class="section-label">Research</p>
-    <h2>研究</h2>
+  <p class="section-label">Research</p>
+  <h2>研究</h2>
 
-    <div class="home-research-grid">
+  <div class="home-research-grid">
 
-      <article class="home-research-card">
-        <p class="pillar-number">Pillar 1</p>
-        <h3>Molecular Mechanism</h3>
-        <p>
-          複雑ソフトマターの分子機構
-        </p>
-      </article>
+    <article class="card">
+      <p class="pillar-number">Pillar 1</p>
+      <h3>複雑ソフトマターの分子機構</h3>
+      <p class="card-title-en">
+        Molecular Mechanism
+      </p>
 
-      <article class="home-research-card">
-        <p class="pillar-number">Pillar 2</p>
-        <h3>Multiscale Dynamics</h3>
-        <p>
-          階層構造とダイナミクス
-        </p>
-      </article>
+      <div class="research-image">
+        <img
+          src="/images/research/water.png"
+          alt="水素結合ネットワーク"
+        />
+      </div>
+    </article>
 
-      <article class="home-research-card">
-        <p class="pillar-number">Pillar 3</p>
-        <h3>Data-driven Discovery of Principles</h3>
-        <p>
-          データ駆動による原理の理解
-        </p>
-      </article>
 
-    </div>
+    <article class="card">
+      <p class="pillar-number">Pillar 2</p>
+      <h3>マルチスケール構造–流動関係</h3>
+      <p class="card-title-en">
+        Multiscale Structure–Flow Relationships
+      </p>
 
-    <p class="home-link">
-      <a href={`${base}/research/`}>研究内容を見る →</a>
-    </p>
+      <div class="research-image">
+        <img
+          src="/images/research/polymer.png"
+          alt="多数の高分子鎖からなる複雑な分子集合体"
+        />
+      </div>
+    </article>
 
-  </section>
+
+    <article class="card">
+      <p class="pillar-number">Pillar 3</p>
+      <h3>データ駆動による原理の理解</h3>
+      <p class="card-title-en">
+        Data-driven Discovery of Principles
+      </p>
+
+      <div class="research-image">
+        <img
+          src="/images/research/graph.png"
+          alt="粒子構造をグラフとして表現したデータ駆動解析"
+        />
+      </div>
+    </article>
+
+  </div>
+
+  <p class="home-link">
+    <a href={`${base}/research/`}>研究内容を見る →</a>
+  </p>
+
+</section>
+
 
 
   <!-- News -->
