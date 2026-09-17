@@ -1031,3 +1031,26 @@ footer a:hover {
   object-fit: contain;
   display: block;
 }
+
+.group-photo-section {
+  margin: 0 0 64px;
+}
+
+.group-photo {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.group-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.group-photo-caption {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: right;
+}
