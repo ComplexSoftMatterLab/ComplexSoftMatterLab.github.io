@@ -226,7 +226,7 @@ footer p {
 /* Hero */
 
 .hero {
-  padding: 55px 20px 45px;
+  padding: 35px 20px 35px;
 
   display: flex;
   flex-direction: column;
@@ -238,33 +238,21 @@ footer p {
 }
 
 .hero-lab {
-  margin-bottom: 16px;
-
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-
-  color: #777;
+  margin-bottom: 12px;
 }
 
 .hero-tagline {
-  margin: 12px 0 0;
-
-  font-size: clamp(1.5rem, 3vw, 2.4rem);
-  font-weight: 300;
+  margin: 10px 0 0;
 }
 
 .hero-affiliation {
-  margin-top: 35px;
-
-  line-height: 1.8;
-  color: #666;
+  margin-top: 28px;
 }
 
 .hero-visual {
   width: 100%;
   max-width: 1100px;
-  margin: 20px auto 0;
+  margin: 15px auto 0;
 }
 
 .hero-visual img {
