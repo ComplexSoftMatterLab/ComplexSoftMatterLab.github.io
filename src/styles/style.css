@@ -238,13 +238,10 @@ footer p {
 }
 
 .hero-tagline {
-  margin: 12px 0 0;
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
-  font-weight: 300;
-}
-
-.hero-tagline {
   margin: 10px 0 0;
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 .hero-affiliation {
@@ -262,6 +259,7 @@ footer p {
   width: 100%;
   height: auto;
 }
+
 /* Home introduction */
 
 .home-intro {
