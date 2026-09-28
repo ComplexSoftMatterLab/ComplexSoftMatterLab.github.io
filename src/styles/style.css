@@ -237,8 +237,10 @@ footer p {
   background: #f5f7f8;
 }
 
-.hero-lab {
-  margin-bottom: 12px;
+.hero-tagline {
+  margin: 12px 0 0;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 300;
 }
 
 .hero-tagline {
