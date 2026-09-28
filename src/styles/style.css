@@ -244,6 +244,12 @@ footer p {
   line-height: 1.2;
 }
 
+.hero-affiliation {
+  margin-top: 22px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
 .hero-visual {
   width: 100%;
   max-width: 1100px;
