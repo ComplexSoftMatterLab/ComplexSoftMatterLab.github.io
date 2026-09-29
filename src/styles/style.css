@@ -1060,3 +1060,18 @@ footer a:hover {
   color: #777;
   text-align: right;
 }
+
+@media (max-width: 768px) {
+  .nav-logo {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .uosaka-logo img {
+    width: 150px;
+  }
+
+  .nav-brand {
+    gap: 10px;
+  }
+}
