@@ -95,6 +95,25 @@ a {
   color: #000;
 }
 
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.uosaka-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.uosaka-logo img {
+  display: block;
+  width: 200px;
+  height: auto;
+  transform: translateY(-4px);
+}
+
 
 /* ========================================
    3. Common Components
